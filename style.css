@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+
+* {
+  outline: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  margin-right: 4rem;
+  display: grid;
+  grid-template-columns: 2fr repeat(3, 1fr) 0.3fr;
+}
+
+nav {
+  grid-row: 1 / 2;
+  grid-column: 1 / 6;
+  margin-left: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.logo {
+  flex: 1;
+}
+
+.logo img {
+  height: 4rem;
+  width: auto;
+  padding-top: 1rem;
+}
+
+.line {
+  flex: 1;
+  border: 1px solid #000;
+}
+
+nav ul {
+  flex: 1;
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.img-xl {
+  grid-row: 1 / 5;
+  grid-column: 1 / 2;
+  z-index: -1;
+}
+
+h1 {
+  grid-row: 2 / 3;
+  grid-column: 2 / 4;
+  font-size: 6rem;
+  display: grid;
+}
+
+h1 span:first-child {
+  color: #fff;
+  text-shadow: 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black;
+  justify-self: start;
+  align-self: end;
+  font-family: "Merriweather";
+}
+
+h1 span:nth-child(2) {
+  justify-self: center;
+  align-self: start;
+  font-family: "Merriweather";
+}
+
+h3 {
+  grid-row: 2 / 3;
+  grid-column: 4 / 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: #888;
+  padding-bottom: 2rem;
+}
+
+h3 span {
+  font-family: "Merriweather";
+  font-weight: 400;
+}
+
+.social {
+  grid-row: 2 / 3;
+  grid-column: 5 / 6;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 2rem;
+}
+
+.social img {
+  max-width: 2rem;
+  max-height: 2rem;
+}
+
+.btn {
+  grid-row: 3 / 4;
+  grid-column: 4 / 6;
+}
+
+.btn button {
+  background-color: #000;
+  color: #fff;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.menu {
+  grid-row: 4 / 5;
+  grid-column: 2 / 3;
+  display: flex;
+}
+.menu ul li {
+  font-size: 2rem;
+  line-height: 3rem;
+  color: #888;
+}
+
+.menu li:first-child {
+  color: #000;
+  font-weight: 500;
+}
+
+.menu li span {
+  font-size: 1rem;
+}
+
+.quote {
+  grid-row: 4 / 5;
+  grid-column: 3 / 5;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-right: 7rem;
+}
+
+.quote .double img {
+  max-height: 2rem;
+  max-width: 2rem;
+}
+
+.quote p {
+  font-weight: 500;
+}
+
+.quote div:nth-child(3) {
+  padding-right: 3rem;
+}
+
+.arrow {
+  grid-row: 4 / 5;
+  grid-column: 5 / 6;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.arrow img {
+  width: 4rem;
+  height: 8rem;
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    margin-right: 1rem;
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+  nav {
+    margin-left: 1rem;
+  }
+  .logo {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+  }
+  nav ul {
+    grid-row: 1 / 2;
+    grid-column: 2 / 4;
+  }
+  .img-xl {
+    grid-row: 1 / 4;
+    grid-column: 1 / 2;
+  }
+  h1 {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+  }
+  h3 {
+    grid-row: 2 / 3;
+    grid-column: 3 / 4;
+  }
+  .btn {
+    grid-row: 3 / 4;
+    grid-column: 3 / 4;
+  }
+  .social {
+    grid-row: 4 / 5;
+    grid-column: 1 / 2;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu {
+    grid-row: 4 / 5;
+    grid-column: 2 / 3;
+  }
+  .quote {
+    grid-row: 4 / 5;
+    grid-column: 3 / 4;
+    padding-right: 0;
+  }
+  .quote div:nth-child(3) {
+    padding-right: 0;
+  }
+  nav .line,
+  .arrow {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .img-xl {
+    display: none;
+  }
+  body {
+    margin-right: 0;
+    grid-template-columns: 1fr 1fr;
+  }
+  nav {
+    margin-left: 0;
+    margin: 0 3rem;
+  }
+  .logo {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+  }
+  nav ul {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    flex-wrap: wrap;
+  }
+  h1 {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+  }
+  h3 {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+  }
+  .social {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+  }
+  .btn {
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+  }
+  .menu {
+    grid-row: 4 / 5;
+    grid-column: 1 / 2;
+  }
+  .quote {
+    grid-row: 4 / 5;
+    grid-column: 2 / 3;
+  }
+}
